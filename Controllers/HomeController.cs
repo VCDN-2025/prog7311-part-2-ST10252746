@@ -12,13 +12,6 @@ namespace PROG7311_POE_PART_2.Controllers
             return View();
         }
 
-        // About Page
-        [AllowAnonymous]
-        public IActionResult About()
-        {
-            return View();
-        }
-
         // Authenticated Dashboard Landing Page
         [Authorize]
         public IActionResult Index()
