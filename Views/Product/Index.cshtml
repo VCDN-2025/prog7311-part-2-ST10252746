@@ -14,6 +14,10 @@
             <th>Name</th>
             <th>Category</th>
             <th>Production Date</th>
+            <th>Description</th>
+            <th>Cost</th>
+            <th>Lifespan (Years)</th>
+            <th>Manufacturer</th>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +27,10 @@
                 <td>@product.Name</td>
                 <td>@product.Category</td>
                 <td>@product.ProductionDate.ToShortDateString()</td>
+                <td>@product.Description</td>
+                <td>R @product.Cost.ToString("N2")</td>
+                <td>@product.LifespanYears</td>
+                <td>@product.Manufacturer</td>
             </tr>
         }
     </tbody>
