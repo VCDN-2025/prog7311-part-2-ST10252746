@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-5 text-center">
+    <h2>Welcome, @User.Identity?.Name!</h2>
+
+    @if (User.IsInRole("Farmer"))
+    {
+        <p>You can now manage your farm products.</p>
+        <a class="btn btn-primary" asp-controller="Product" asp-action="Create">Add Product</a>
+        <a class="btn btn-secondary" asp-controller="Product" asp-action="Index">My Products</a>
+    }
+    else if (User.IsInRole("Employee"))
+    {
+        <p>You can now manage farmer profiles and view all farm data.</p>
+        <a class="btn btn-primary" asp-controller="Employee" asp-action="CreateFarmer">Add Farmer</a>
+        <a class="btn btn-secondary" asp-controller="Employee" asp-action="ViewAllProducts">View All Products</a>
+    }
+</div>
