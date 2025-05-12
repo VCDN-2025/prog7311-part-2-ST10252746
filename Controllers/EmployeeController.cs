@@ -48,9 +48,12 @@ public class EmployeeController : Controller
                 var farmer = new Farmer
                 {
                     UserId = user.Id,
-                    FullName = model.FullName,
+                    FirstName = model.FirstName,
+                    Surname = model.Surname,
+                    PhoneNumber = model.PhoneNumber,
                     FarmName = model.FarmName,
-                    Location = model.Location
+                    FarmAddress = model.FarmAddress,
+                    FarmType = model.FarmType
                 };
 
                 _context.Farmers.Add(farmer);
